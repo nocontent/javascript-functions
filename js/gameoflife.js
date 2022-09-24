@@ -13,7 +13,9 @@ function contains(cell) {
     && this.some((element) => same(element, cell));
 }
 
-const printCell = (cell, state) => {};
+const printCell = (cell, state) => { 
+  return contains.call(state, cell) ? '\u25A3' : '\u25A2'; 
+};
 
 const corners = (state = []) => {};
 
